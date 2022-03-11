@@ -135,7 +135,8 @@ repository.findObjects();
 // register with the 'object' event
 repository.on("object", object=> {
 	console.log(object)
-	// returns an object that can be used in the constructor for OcflObject
+	// returns an ocfl object that is ready to use
+	// load it and go: await object.load()
 });
 ```
 
