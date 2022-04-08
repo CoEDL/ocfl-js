@@ -130,13 +130,19 @@ await repository.isRepository()
 
 ```
 // find objects
-repository.findObjects();
+await repository.findObjects();
 
 // register with the 'object' event
 repository.on("object", object=> {
 	console.log(object)
 	// returns an ocfl object that is ready to use
 	// load it and go: await object.load()
+});
+```
+// register the 'done' event
+```
+repository.on('done', async () => {
+  // Will emit done when it has finished finding objects
 });
 ```
 
